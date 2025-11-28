@@ -40,6 +40,16 @@ header {
   padding: 2rem 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 20vw;
+
+  section:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
 h1, footer > h2 {
   font-family: var(--hx-font-family);
 }
@@ -58,4 +68,46 @@ h1, footer > h2 {
       text-decoration: underline;
     }
   }
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "photo-sm card-lg-1 card-lg-1 photo-lg"
+    "card-lg-2 card-lg-2 card-sm photo-lg";
+
+  > .item {
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+
+    img {
+      object-fit: cover;
+      object-position: 42% 50%;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+  }
+}
+
+.bento-grid > .item:nth-child(1) {
+  padding: 0;
+  grid-area: photo-sm;
+}
+.bento-grid > .item:nth-child(2) {
+  grid-area: card-lg-1;
+}
+.bento-grid > .item:nth-child(3) {
+  padding: 0;
+  grid-area: photo-lg;
+}
+.bento-grid > .item:nth-child(4) {
+  grid-area: card-lg-2;
+}
+.bento-grid > .item:nth-child(5) {
+  grid-area: card-sm;
 }
