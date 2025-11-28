@@ -9,6 +9,10 @@
 }
 
 :root {
+  /* Cores: */
+  --dark-navy-blue: #161620;
+
+  /* Famílias de fonte: */
   --def-font-family: "Zalando Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --hx-font-family: "Prosto One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -20,6 +24,38 @@
   font-family: var(--def-font-family);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-navy-blue);
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
 h1, footer > h2 {
   font-family: var(--hx-font-family);
+}
+
+.navbar {
+  display: inherit;
+  width: 30%;
+  justify-content: space-between;
+
+  a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
