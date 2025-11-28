@@ -11,6 +11,8 @@
 :root {
   /* Cores: */
   --dark-navy-blue: #161620;
+  --green: #1a991a;
+  --red: #c42121;
 
   /* Famílias de fonte: */
   --def-font-family: "Zalando Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -54,6 +56,13 @@ h1, footer > h2 {
   font-family: var(--hx-font-family);
 }
 
+.check {
+  color: var(--green);
+}
+.cross {
+  color: var(--red);
+}
+
 .navbar {
   display: inherit;
   width: 30%;
@@ -80,6 +89,8 @@ h1, footer > h2 {
     "card-lg-2 card-lg-2 card-sm photo-lg";
 
   > .item {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     border: 2px solid white;
     border-radius: 1rem;
@@ -106,8 +117,36 @@ h1, footer > h2 {
   grid-area: photo-lg;
 }
 .bento-grid > .item:nth-child(4) {
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 1rem;
   grid-area: card-lg-2;
 }
 .bento-grid > .item:nth-child(5) {
   grid-area: card-sm;
+}
+
+.skillset-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, minmax(1fr, 275px));
+  gap: 1.5rem;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    span {
+      text-align: center;
+    }
+    small {
+      font-size: .75rem;
+    }
+  }
 }
