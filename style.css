@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Prosto One';
+  src: url(./assets/fonts/Prosto_One/ProstoOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Zalando Sans';
+  src: url(./assets/fonts/Zalando_Sans/ZalandoSans-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+  --def-font-family: "Zalando Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --hx-font-family: "Prosto One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--def-font-family);
+}
+
+h1, footer > h2 {
+  font-family: var(--hx-font-family);
+}
