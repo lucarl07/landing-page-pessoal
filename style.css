@@ -16,6 +16,7 @@
   --green: #1a991a;
   --navy-blue: #30306e;
   --dark-navy-blue: #161620;
+  --yellowish-grey: #8f8f80;
 
   /* Famílias de fonte: */
   --def-font-family: "Zalando Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,6 +54,15 @@ main {
   section:not(:last-of-type) {
     margin-bottom: 2rem;
   }
+  section:not(.bento-grid) {
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-family: var(--hx-font-family);
+      font-size: 2rem;
+    }
+  }
 }
 
 footer {
@@ -87,10 +97,20 @@ footer {
   }
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 .page-title {
   font-family: var(--hx-font-family);
 }
+.characteristics {
+  list-style-type: none;
 
+  small {
+    color: var(--yellowish-grey);
+  }
+}
 .check {
   color: var(--green);
 }
