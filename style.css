@@ -12,11 +12,11 @@
   /* Cores: */
   --white: #ffffff;
   --black: #000000;
+  --grey: #8f8f80;
   --red: #c42121;
   --green: #1a991a;
   --navy-blue: #30306e;
   --dark-navy-blue: #161620;
-  --yellowish-grey: #8f8f80;
 
   /* Famílias de fonte: */
   --def-font-family: "Zalando Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,19 +40,25 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+  background-image: linear-gradient(180deg, var(--navy-blue), #ffffff00);
+  /* background-image: linear-gradient(180deg, blue, green 40%, red); */
+  /* box-shadow: 0 .25rem 1rem var(--navy-blue); */
 }
 
 main {
   display: flex;
   flex-direction: column;
-  padding: 4rem 20vw;
+  padding: 8rem 20vw;
 
   section:not(:last-of-type) {
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
   }
   section:not(.bento-grid) {
     h2 {
@@ -108,11 +114,11 @@ h1 {
   list-style-type: none;
 
   small {
-    color: var(--yellowish-grey);
+    color: var(--grey);
   }
 }
 .question-mark {
-  color: var(--yellowish-grey);
+  color: var(--grey);
 }
 .check {
   color: var(--green);
@@ -259,6 +265,10 @@ h1 {
 }
 
 #projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
   article {
     display: flex;
     gap: 2rem;
@@ -277,7 +287,7 @@ h1 {
     .wrapper:last-child {
       width: 60%;
       .done-in {
-        color: var(--yellowish-grey);
+        color: var(--grey);
       }
     }
   }
