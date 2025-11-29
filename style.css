@@ -10,9 +10,12 @@
 
 :root {
   /* Cores: */
-  --dark-navy-blue: #161620;
-  --green: #1a991a;
+  --white: #ffffff;
+  --black: #000000;
   --red: #c42121;
+  --green: #1a991a;
+  --navy-blue: #30306e;
+  --dark-navy-blue: #161620;
 
   /* Famílias de fonte: */
   --def-font-family: "Zalando Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,7 +35,7 @@ html {
 
 body {
   background-color: var(--dark-navy-blue);
-  color: white;
+  color: var(--white);
 }
 
 header {
@@ -52,7 +55,39 @@ main {
   }
 }
 
-h1, footer > h2 {
+footer {
+  display: flex;
+  padding: 2rem;
+  background-color: var(--black);
+  align-items: top;
+  justify-content: space-between;
+
+  .left-segment {
+    display: inherit;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .right-segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+
+    .social-media {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.page-title {
   font-family: var(--hx-font-family);
 }
 
@@ -69,7 +104,7 @@ h1, footer > h2 {
   justify-content: space-between;
 
   a {
-    color: white;
+    color: var(--white);
     text-transform: uppercase;
     text-decoration: none;
 
@@ -92,7 +127,7 @@ h1, footer > h2 {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 1rem;
 
     img {
@@ -189,7 +224,7 @@ h1, footer > h2 {
       border-radius: 0 0 .75rem 0;
     }
     &:hover {
-      background-color: white;
+      background-color: var(--white);
       
       p {
         display: initial;
