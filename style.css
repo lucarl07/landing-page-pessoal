@@ -60,7 +60,7 @@ main {
     }
     h3 {
       font-family: var(--hx-font-family);
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 }
@@ -110,6 +110,9 @@ h1 {
   small {
     color: var(--yellowish-grey);
   }
+}
+.question-mark {
+  color: var(--yellowish-grey);
 }
 .check {
   color: var(--green);
@@ -250,6 +253,31 @@ h1 {
       }
       img {
         filter: none;
+      }
+    }
+  }
+}
+
+#projetos {
+  article {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border: 2px solid var(--white);
+    border-radius: 1rem;
+    
+    .wrapper {
+      display: inherit;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .wrapper:first-child {
+      width: 40%;
+    }
+    .wrapper:last-child {
+      width: 60%;
+      .done-in {
+        color: var(--yellowish-grey);
       }
     }
   }
